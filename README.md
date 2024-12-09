@@ -74,7 +74,7 @@ Copy and combine the previously downloaded postcss.config.js and tailwind.config
 
 ## Create your own CSS file
 ```
-mkdir src
+mkdir src # in the project root
 touch styles.css
 
 # Add the followings to styles.css
