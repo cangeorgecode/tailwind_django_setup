@@ -20,7 +20,15 @@ Move the CSS file from to django
 mv path/to/tailwind/build/* path/to/proj/core/static/
 ```
 
-## Configure settings.py as per my django template repo
+## Configure settings.py as per below (reference https://github.com/cangeorgecode/django-template)
+```
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'theme/static'),
+]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+```
 
 ## Move the Tailwind HTML templates (*.html) to the templates/core directory
 
